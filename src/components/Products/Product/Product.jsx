@@ -1,5 +1,6 @@
-import React from "react";
+import React,{useState,useEffect}from "react";
 import { useDispatch, useSelector } from "react-redux";
+// import axios from "axios"
 
 import {
   addItemToCart,
@@ -8,8 +9,34 @@ import {
 } from "../../../store/cart/cart.actions";
 
 const Product = () => {
-  const id = null;
+
+//   const [pro, setPro] = useState([]);
+//   useEffect(() => {
+//     axios.get("http://localhost:8080/products").then((r) => {
+//       setPro(r.data);
+//     });
+//   }, []);
+
+
+//   const id = null;
   return (
+// <>
+// {pro.map((pro)=>{
+//    <div
+//    key={pro.id}
+//    style={{
+//      padding: "10px",
+//      margin: "auto",
+//      marginTop: "10px",
+//      border: "1px solid grey",
+//      maxWidth: "200px",
+//    }}
+//  >
+//    <div>{pro.title}</div>
+//    <div>{pro.description}</div>
+//  </div>
+// })}
+
     <div data-cy={`product-${id}`}>
       <h3 data-cy="product-name">name</h3>
       <h6 data-cy="product-description">description</h6>
@@ -21,6 +48,7 @@ const Product = () => {
         <button data-cy="product-remove-cart-item-button"></button>
       </div>
     </div>
+    
   );
 };
 
